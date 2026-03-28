@@ -30,6 +30,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    extensions.getByType(BasePluginExtension::class.java)
+        .archivesName
+        .set("PvotCalculator-v${defaultConfig.versionName}")
+
     buildTypes {
         release {
             isMinifyEnabled = true
