@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="278"
@@ -35,13 +36,24 @@
             android:fillColor="#FFFFFF"
             android:pathData="M107.939,184.187L90.3962,166.645L93.3731,163.668L110.916,181.211L107.939,184.187ZM93.3731,184.187L90.3962,181.211L107.939,163.668L110.916,166.645L93.3731,184.187Z" />
 
-        <!-- Equals button (bottom-right circle, center ~177.96, 173.96, r=35.69, purple) -->
+        <!-- Equals button (bottom-right circle, center ~177.96, 173.96, r=35.69, purple gradient) -->
         <path
-            android:fillColor="#6B5CEE"
-            android:pathData="M142.271,173.9626 a35.6916,35.6916 0 1,0 71.3831,0 a35.6916,35.6916 0 1,0 -71.3831,0Z" />
+            android:pathData="M142.271,173.9626 a35.6916,35.6916 0 1,0 71.3831,0 a35.6916,35.6916 0 1,0 -71.3831,0Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="154.769"
+                    android:startY="138.012"
+                    android:endX="177.963"
+                    android:endY="209.654"
+                    android:type="linear">
+                    <item android:offset="0" android:color="#8072FB" />
+                    <item android:offset="1" android:color="#6B5CEE" />
+                </gradient>
+            </aapt:attr>
+        </path>
         <path
             android:fillColor="#FFFFFF"
-            android:pathData="M166.385,170.429V166.37H189.54V181.556H166.385ZM166.385,181.556V177.496H189.54V181.556H166.385Z" />
+            android:pathData="M166.385,170.429V166.37H189.54V170.429H166.385ZM166.385,181.556V177.496H189.54V181.556H166.385Z" />
 
     </group>
 
