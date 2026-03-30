@@ -2,37 +2,47 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
+    android:viewportWidth="278"
+    android:viewportHeight="278">
 
-    <!-- Plus sign (horizontal) -->
-    <path
-        android:fillColor="#FF9F0A"
-        android:pathData="M44,51.5 L64,51.5"
-        android:strokeWidth="3.5"
-        android:strokeColor="#FF9F0A"
-        android:strokeLineCap="round" />
+    <group
+        android:scaleX="0.72"
+        android:scaleY="0.72"
+        android:pivotX="139"
+        android:pivotY="139">
 
-    <!-- Plus sign (vertical) -->
-    <path
-        android:fillColor="#FF9F0A"
-        android:pathData="M54,41.5 L54,61.5"
-        android:strokeWidth="3.5"
-        android:strokeColor="#FF9F0A"
-        android:strokeLineCap="round" />
+        <!-- Plus button (top-left circle, center ~100.69, 96.69, r=35.69) -->
+        <path
+            android:fillColor="#636575"
+            android:pathData="M65.0,96.6916 a35.6916,35.6916 0 1,0 71.3831,0 a35.6916,35.6916 0 1,0 -71.3831,0Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M98.5864,109.096V84.2871H102.796V109.096H98.5864ZM88.287,98.7965V94.5865H113.096V98.7965H88.287Z" />
 
-    <!-- Equals sign (top line) -->
-    <path
-        android:pathData="M44,67 L64,67"
-        android:strokeWidth="3.5"
-        android:strokeColor="#FFFFFF"
-        android:strokeLineCap="round" />
+        <!-- Minus button (top-right circle, center ~177.96, 96.69, r=35.69) -->
+        <path
+            android:fillColor="#636575"
+            android:pathData="M142.271,96.6916 a35.6916,35.6916 0 1,0 71.3831,0 a35.6916,35.6916 0 1,0 -71.3831,0Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M186.382,94.624V98.7588H169.542V94.624H186.382Z" />
 
-    <!-- Equals sign (bottom line) -->
-    <path
-        android:pathData="M44,74 L64,74"
-        android:strokeWidth="3.5"
-        android:strokeColor="#FFFFFF"
-        android:strokeLineCap="round" />
+        <!-- X button (bottom-left circle, center ~100.65, 173.93, r=35.69) -->
+        <path
+            android:fillColor="#636575"
+            android:pathData="M64.9564,173.928 a35.6916,35.6916 0 1,0 71.3831,0 a35.6916,35.6916 0 1,0 -71.3831,0Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M107.939,184.187L90.3962,166.645L93.3731,163.668L110.916,181.211L107.939,184.187ZM93.3731,184.187L90.3962,181.211L107.939,163.668L110.916,166.645L93.3731,184.187Z" />
+
+        <!-- Equals button (bottom-right circle, center ~177.96, 173.96, r=35.69, purple) -->
+        <path
+            android:fillColor="#6B5CEE"
+            android:pathData="M142.271,173.9626 a35.6916,35.6916 0 1,0 71.3831,0 a35.6916,35.6916 0 1,0 -71.3831,0Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M166.385,170.429V166.37H189.54V181.556H166.385ZM166.385,181.556V177.496H189.54V181.556H166.385Z" />
+
+    </group>
 
 </vector>
