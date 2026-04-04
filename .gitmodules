@@ -1,0 +1,3 @@
+[submodule "libs/PvotLib"]
+	path = libs/PvotLib
+	url = https://github.com/PVOT-OSS/PvotLib
