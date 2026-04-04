@@ -18,9 +18,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import org.prauga.pvotcalculator.ui.theme.CalcBlack
-import org.prauga.pvotcalculator.ui.theme.CalcLightGray
-import org.prauga.pvotcalculator.ui.theme.CalcWhite
+import org.prauga.pvotcalculator.ui.theme.LocalCalculatorColors
 import org.prauga.pvotcalculator.ui.theme.SoraFamily
 
 @Composable
@@ -28,12 +26,13 @@ fun CalculatorScreen(
     modifier: Modifier = Modifier,
     viewModel: CalculatorViewModel = viewModel()
 ) {
+    val colors = LocalCalculatorColors.current
     val isLandscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
 
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(CalcBlack)
+            .background(colors.background)
     ) {
         if (isLandscape) {
             // Landscape: compact display in top-right corner, full-width keypad below
@@ -90,6 +89,8 @@ private fun CalculatorDisplay(
     isLandscape: Boolean,
     modifier: Modifier = Modifier
 ) {
+    val colors = LocalCalculatorColors.current
+
     if (isLandscape) {
         // Two lines always rendered so the keyboard position never shifts:
         //   line 1 — expression (blank when no active expression)
@@ -104,7 +105,7 @@ private fun CalculatorDisplay(
                 fontSize = 12.sp,
                 fontFamily = SoraFamily,
                 fontWeight = FontWeight.Light,
-                color = CalcLightGray,
+                color = colors.expressionText,
                 textAlign = TextAlign.End,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -115,7 +116,7 @@ private fun CalculatorDisplay(
                 fontSize = 34.sp,
                 fontFamily = SoraFamily,
                 fontWeight = FontWeight.Thin,
-                color = CalcWhite,
+                color = colors.displayText,
                 textAlign = TextAlign.End,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -135,7 +136,7 @@ private fun CalculatorDisplay(
                     fontSize = 24.sp,
                     fontFamily = SoraFamily,
                     fontWeight = FontWeight.Light,
-                    color = CalcLightGray,
+                    color = colors.expressionText,
                     textAlign = TextAlign.End,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -149,7 +150,7 @@ private fun CalculatorDisplay(
                 fontSize = 80.sp,
                 fontFamily = SoraFamily,
                 fontWeight = FontWeight.Thin,
-                color = CalcWhite,
+                color = colors.displayText,
                 textAlign = TextAlign.End,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
