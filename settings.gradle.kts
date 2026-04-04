@@ -1,4 +1,4 @@
-includeBuild("../PvotLib")
+includeBuild("libs/PvotLib")
 
 pluginManagement {
     repositories {
