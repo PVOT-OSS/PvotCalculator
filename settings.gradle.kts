@@ -1,3 +1,5 @@
+includeBuild("../PvotLib")
+
 pluginManagement {
     repositories {
         google {
