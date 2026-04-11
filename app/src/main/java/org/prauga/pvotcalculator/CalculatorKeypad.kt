@@ -26,10 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.prauga.pvotcalculator.ui.theme.CalcDarkGray
-import org.prauga.pvotcalculator.ui.theme.CalcLightGray
-import org.prauga.pvotcalculator.ui.theme.CalcOrange
-import org.prauga.pvotcalculator.ui.theme.CalcWhite
+import org.prauga.pvotcalculator.ui.theme.LocalCalculatorColors
 import org.prauga.pvotcalculator.ui.theme.SoraFamily
 
 // Portrait constants
@@ -94,6 +91,8 @@ private fun LandscapeKeypadLayout(
     onPercent: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = LocalCalculatorColors.current
+
     BoxWithConstraints(modifier = modifier) {
         val spacing = LandscapeSpacing
         val hPadding = LandscapeHPadding
@@ -113,35 +112,35 @@ private fun LandscapeKeypadLayout(
         ) {
             // Row 1: 7, 8, 9, ⌫, ÷
             LandscapeRow(spacing) {
-                PillButton("7", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("7") }
-                PillButton("8", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("8") }
-                PillButton("9", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("9") }
-                PillButton("⌫", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onBackspace() }
-                PillButton("÷", CalcOrange, CalcWhite, btnWidth, btnHeight, opFontSize) { onOperator("÷") }
+                PillButton("7", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("7") }
+                PillButton("8", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("8") }
+                PillButton("9", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("9") }
+                PillButton("⌫", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onBackspace() }
+                PillButton("÷", colors.operatorButton, colors.operatorButtonText, btnWidth, btnHeight, opFontSize) { onOperator("÷") }
             }
             // Row 2: 4, 5, 6, AC, ×
             LandscapeRow(spacing) {
-                PillButton("4", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("4") }
-                PillButton("5", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("5") }
-                PillButton("6", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("6") }
-                PillButton("AC", CalcDarkGray, CalcWhite, btnWidth, btnHeight, fontSize = 18) { onClear() }
-                PillButton("×", CalcOrange, CalcWhite, btnWidth, btnHeight, opFontSize) { onOperator("×") }
+                PillButton("4", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("4") }
+                PillButton("5", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("5") }
+                PillButton("6", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("6") }
+                PillButton("AC", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, fontSize = 18) { onClear() }
+                PillButton("×", colors.operatorButton, colors.operatorButtonText, btnWidth, btnHeight, opFontSize) { onOperator("×") }
             }
             // Row 3: 1, 2, 3, %, −
             LandscapeRow(spacing) {
-                PillButton("1", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("1") }
-                PillButton("2", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("2") }
-                PillButton("3", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("3") }
-                PillButton("%", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onPercent() }
-                PillButton("−", CalcOrange, CalcWhite, btnWidth, btnHeight, opFontSize) { onOperator("−") }
+                PillButton("1", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("1") }
+                PillButton("2", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("2") }
+                PillButton("3", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("3") }
+                PillButton("%", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onPercent() }
+                PillButton("−", colors.operatorButton, colors.operatorButtonText, btnWidth, btnHeight, opFontSize) { onOperator("−") }
             }
             // Row 4: +/−, 0, ., =, +
             LandscapeRow(spacing) {
-                PillButton("+/−", CalcDarkGray, CalcWhite, btnWidth, btnHeight, fontSize = 18) { onToggleSign() }
-                PillButton("0", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDigit("0") }
-                PillButton(".", CalcDarkGray, CalcWhite, btnWidth, btnHeight, digitFontSize) { onDecimal() }
-                PillButton("=", CalcOrange, CalcWhite, btnWidth, btnHeight, opFontSize) { onEquals() }
-                PillButton("+", CalcOrange, CalcWhite, btnWidth, btnHeight, opFontSize) { onOperator("+") }
+                PillButton("+/−", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, fontSize = 18) { onToggleSign() }
+                PillButton("0", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDigit("0") }
+                PillButton(".", colors.digitButton, colors.digitButtonText, btnWidth, btnHeight, digitFontSize) { onDecimal() }
+                PillButton("=", colors.operatorButton, colors.operatorButtonText, btnWidth, btnHeight, opFontSize) { onEquals() }
+                PillButton("+", colors.operatorButton, colors.operatorButtonText, btnWidth, btnHeight, opFontSize) { onOperator("+") }
             }
         }
     }
@@ -204,6 +203,8 @@ private fun PortraitKeypadLayout(
     onPercent: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val colors = LocalCalculatorColors.current
+
     BoxWithConstraints(modifier = modifier) {
         val spacing = ButtonSpacing
         val hPadding = KeypadPadding
@@ -219,37 +220,37 @@ private fun PortraitKeypadLayout(
         ) {
             // Row 1: AC, +/−, %, ÷
             PortraitRow(spacing) {
-                CalcButton("AC", CalcLightGray, Color.Black, buttonSize, fontSize = 20) { onClear() }
-                CalcButton("+/−", CalcLightGray, Color.Black, buttonSize, fontSize = 18) { onToggleSign() }
-                CalcButton("%", CalcLightGray, Color.Black, buttonSize) { onPercent() }
-                CalcButton("÷", CalcOrange, CalcWhite, buttonSize, fontSize = 30) { onOperator("÷") }
+                CalcButton("AC", colors.functionButton, colors.functionButtonText, buttonSize, fontSize = 20) { onClear() }
+                CalcButton("+/−", colors.functionButton, colors.functionButtonText, buttonSize, fontSize = 18) { onToggleSign() }
+                CalcButton("%", colors.functionButton, colors.functionButtonText, buttonSize) { onPercent() }
+                CalcButton("÷", colors.operatorButton, colors.operatorButtonText, buttonSize, fontSize = 30) { onOperator("÷") }
             }
             // Row 2: 7, 8, 9, ×
             PortraitRow(spacing) {
-                CalcButton("7", CalcDarkGray, CalcWhite, buttonSize) { onDigit("7") }
-                CalcButton("8", CalcDarkGray, CalcWhite, buttonSize) { onDigit("8") }
-                CalcButton("9", CalcDarkGray, CalcWhite, buttonSize) { onDigit("9") }
-                CalcButton("×", CalcOrange, CalcWhite, buttonSize, fontSize = 30) { onOperator("×") }
+                CalcButton("7", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("7") }
+                CalcButton("8", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("8") }
+                CalcButton("9", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("9") }
+                CalcButton("×", colors.operatorButton, colors.operatorButtonText, buttonSize, fontSize = 30) { onOperator("×") }
             }
             // Row 3: 4, 5, 6, −
             PortraitRow(spacing) {
-                CalcButton("4", CalcDarkGray, CalcWhite, buttonSize) { onDigit("4") }
-                CalcButton("5", CalcDarkGray, CalcWhite, buttonSize) { onDigit("5") }
-                CalcButton("6", CalcDarkGray, CalcWhite, buttonSize) { onDigit("6") }
-                CalcButton("−", CalcOrange, CalcWhite, buttonSize, fontSize = 30) { onOperator("−") }
+                CalcButton("4", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("4") }
+                CalcButton("5", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("5") }
+                CalcButton("6", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("6") }
+                CalcButton("−", colors.operatorButton, colors.operatorButtonText, buttonSize, fontSize = 30) { onOperator("−") }
             }
             // Row 4: 1, 2, 3, +
             PortraitRow(spacing) {
-                CalcButton("1", CalcDarkGray, CalcWhite, buttonSize) { onDigit("1") }
-                CalcButton("2", CalcDarkGray, CalcWhite, buttonSize) { onDigit("2") }
-                CalcButton("3", CalcDarkGray, CalcWhite, buttonSize) { onDigit("3") }
-                CalcButton("+", CalcOrange, CalcWhite, buttonSize, fontSize = 30) { onOperator("+") }
+                CalcButton("1", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("1") }
+                CalcButton("2", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("2") }
+                CalcButton("3", colors.digitButton, colors.digitButtonText, buttonSize) { onDigit("3") }
+                CalcButton("+", colors.operatorButton, colors.operatorButtonText, buttonSize, fontSize = 30) { onOperator("+") }
             }
             // Row 5: 0 (wide), ., =
             PortraitRow(spacing) {
-                WideCalcButton("0", CalcDarkGray, CalcWhite, buttonSize, spacing) { onDigit("0") }
-                CalcButton(".", CalcDarkGray, CalcWhite, buttonSize) { onDecimal() }
-                CalcButton("=", CalcOrange, CalcWhite, buttonSize, fontSize = 30) { onEquals() }
+                WideCalcButton("0", colors.digitButton, colors.digitButtonText, buttonSize, spacing) { onDigit("0") }
+                CalcButton(".", colors.digitButton, colors.digitButtonText, buttonSize) { onDecimal() }
+                CalcButton("=", colors.operatorButton, colors.operatorButtonText, buttonSize, fontSize = 30) { onEquals() }
             }
         }
     }

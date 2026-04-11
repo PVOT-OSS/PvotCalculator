@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
             CalculatorTheme {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    containerColor = Color.Black
+                    containerColor = Color.Unspecified
                 ) { innerPadding ->
                     CalculatorScreen(
                         modifier = Modifier.padding(innerPadding)
