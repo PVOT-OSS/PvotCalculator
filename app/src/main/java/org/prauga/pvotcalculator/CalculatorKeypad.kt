@@ -80,14 +80,7 @@ fun CalculatorKeypad(
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Landscape layout — 5 columns × 4 rows of pill-shaped buttons
-//
-// Row 1: 7   8   9   ⌫   ÷
-// Row 2: 4   5   6   AC  ×
-// Row 3: 1   2   3   %   −
-// Row 4: +/− 0   .   =   +
-// ─────────────────────────────────────────────────────────────────────────────
 
 @Composable
 private fun LandscapeKeypadLayout(
@@ -199,16 +192,7 @@ private fun PillButton(
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Portrait layout — 4 columns × 5 rows of circular buttons (original design)
-//
-// Row 1: AC  +/−  %   ÷
-// Row 2: 7   8    9   ×
-// Row 3: 4   5    6   −
-// Row 4: 1   2    3   +
-// Row 5: 0 (wide) .   =
-// ─────────────────────────────────────────────────────────────────────────────
-
 @Composable
 private fun PortraitKeypadLayout(
     onDigit: (String) -> Unit,
