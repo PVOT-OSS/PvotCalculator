@@ -91,9 +91,7 @@ private fun CalculatorDisplay(
     modifier: Modifier = Modifier
 ) {
     if (isLandscape) {
-        // Two lines always rendered so the keyboard position never shifts:
-        //   line 1 — expression (blank when no active expression)
-        //   line 2 — current display value
+        // Two lines always rendered so the keyboard position never shifts
         Column(
             modifier = modifier.padding(horizontal = 16.dp, vertical = 4.dp),
             horizontalAlignment = Alignment.End,
