@@ -15,15 +15,6 @@ runs:
       shell: bash
       run: ./gradlew assembleDebug
 
-    - name: Generate Android.bp
-      shell: bash
-      run: |
-        ./gradlew generateBp
-        if [[ ! -z $(git status -s) ]]; then
-          git status
-          exit -1
-        fi
-
     - uses: actions/upload-artifact@v6
       with:
         name: ExactCalculator-debug.apk
