@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ExactCalculator"
+rootProject.name = "PvotCalculator"
 include(":app")
