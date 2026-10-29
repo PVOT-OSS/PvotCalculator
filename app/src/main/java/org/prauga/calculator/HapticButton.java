@@ -6,6 +6,8 @@
 package org.prauga.calculator;
 
 import android.content.Context;
+import android.text.TextPaint;
+import android.text.method.TransformationMethod;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.HapticFeedbackConstants;
@@ -46,8 +48,34 @@ public class HapticButton extends MaterialButton {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        if (getIcon() == null) {
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, h * 0.4f);
+        updateTextSize(w, h);
+    }
+
+    @Override
+    protected void onTextChanged(CharSequence text, int start, int lengthBefore,
+            int lengthAfter) {
+        super.onTextChanged(text, start, lengthBefore, lengthAfter);
+        updateTextSize(getWidth(), getHeight());
+    }
+
+    private void updateTextSize(int w, int h) {
+        if (w == 0 || h == 0 || getIcon() != null) {
+            return;
         }
+
+        float textSize = h * 0.4f;
+        CharSequence text = getText();
+        final TransformationMethod method = getTransformationMethod();
+        if (method != null) {
+            text = method.getTransformation(text, this);
+        }
+        final TextPaint paint = new TextPaint(getPaint());
+        paint.setTextSize(textSize);
+        final float textWidth = paint.measureText(text, 0, text.length());
+        final float available = 0.9f * (w - getCompoundPaddingLeft() - getCompoundPaddingRight());
+        if (textWidth > available) {
+            textSize *= available / textWidth;
+        }
+        setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
     }
 }
