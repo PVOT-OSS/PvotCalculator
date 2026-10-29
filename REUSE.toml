@@ -23,3 +23,9 @@ path = ["gradle/wrapper/**", "gradlew*"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2007-2023 Gradle, Inc."
 SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["app/src/main/res/font/sora_*.ttf"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2019 The Sora Project Authors"
+SPDX-License-Identifier = "OFL-1.1"
