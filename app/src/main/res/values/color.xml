@@ -16,6 +16,7 @@
     <color name="display_formula_text_color">#000000</color>
     <color name="display_result_text_color">#8E8E93</color>
     <color name="display_result_exponent_text_color">#8E8E93</color>
+    <color name="display_error_text_color">#D70015</color>
 
     <!-- Buttons -->
     <color name="button_digit_color">#FFFFFF</color>
