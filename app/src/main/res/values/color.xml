@@ -5,13 +5,24 @@
 -->
 <resources>
 
+    <!-- Background -->
+    <color name="calculator_background">#F2F2F7</color>
+
     <!-- Display background -->
-    <color name="history_background_color">@color/material_dynamic_neutral95</color>
-    <color name="display_background_color">@color/material_dynamic_neutral90</color>
+    <color name="history_background_color">#FFFFFF</color>
+    <color name="display_background_color">@color/calculator_background</color>
 
     <!-- Display text -->
-    <color name="display_formula_text_color">@color/material_dynamic_neutral20</color>
-    <color name="display_result_text_color">@color/material_dynamic_neutral40</color>
-    <color name="display_result_exponent_text_color">@color/material_dynamic_neutral40</color>
+    <color name="display_formula_text_color">#000000</color>
+    <color name="display_result_text_color">#8E8E93</color>
+    <color name="display_result_exponent_text_color">#8E8E93</color>
+
+    <!-- Buttons -->
+    <color name="button_digit_color">#FFFFFF</color>
+    <color name="button_on_digit_color">#000000</color>
+    <color name="button_function_color">#D4D4D2</color>
+    <color name="button_on_function_color">#000000</color>
+    <color name="button_operator_color">#FF9F0A</color>
+    <color name="button_on_operator_color">#FFFFFF</color>
 
 </resources>
