@@ -6,6 +6,7 @@
 <resources>
 
     <style name="Theme" parent="Theme.Material3Expressive.DayNight">
+        <item name="android:windowBackground">@color/calculator_background</item>
         <item name="android:statusBarColor">@color/display_background_color</item>
         <item name="android:windowLightStatusBar">?isLightTheme</item>
         <item name="android:navigationBarColor">@color/calculator_background</item>
