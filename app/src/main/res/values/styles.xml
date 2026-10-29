@@ -7,7 +7,8 @@
 
     <style name="DisplayTextStyle" parent="Widget.MaterialComponents.TextView">
         <item name="android:cursorVisible">false</item>
-        <item name="fontFamily">sans-serif</item>
+        <item name="fontFamily">@font/sora</item>
+        <item name="android:textFontWeight">100</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:gravity">bottom|end</item>
         <item name="android:textAlignment">viewEnd</item>
@@ -53,6 +54,8 @@
         <item name="android:includeFontPadding">false</item>
         <item name="android:padding">0dp</item>
         <item name="android:onClick">onButtonClick</item>
+        <item name="android:fontFamily">@font/sora</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:fontFeatureSettings">tnum, cv03, cv04</item>
         <item name="android:layout_marginHorizontal">@dimen/button_horizontal_margin</item>
     </style>
