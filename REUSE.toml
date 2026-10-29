@@ -7,7 +7,7 @@ SPDX-PackageSupplier = "The LineageOS Project"
 SPDX-PackageDownloadLocation = "https://github.com/LineageOS/android_packages_apps_ExactCalculator"
 
 [[annotations]]
-path = [".gitignore"]
+path = [".gitignore", "app/.gitignore"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2014 The Android Open Source Project"
 SPDX-License-Identifier = "Apache-2.0"
