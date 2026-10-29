@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: 2016 The Android Open Source Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<com.android.calculator2.CalculatorDisplay
+<org.prauga.calculator.CalculatorDisplay
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/display"
     android:layout_width="match_parent"
@@ -19,14 +19,14 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <com.android.calculator2.CalculatorScrollView
+        <org.prauga.calculator.CalculatorScrollView
             android:id="@+id/formula_scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:overScrollMode="never"
             android:scrollbars="none">
 
-            <com.android.calculator2.CalculatorFormula
+            <org.prauga.calculator.CalculatorFormula
                 android:id="@+id/formula"
                 style="@style/DisplayTextStyle.Formula"
                 android:layout_width="wrap_content"
@@ -37,9 +37,9 @@
                 android:textColor="@color/display_formula_text_color"
                 android:textIsSelectable="false" />
 
-        </com.android.calculator2.CalculatorScrollView>
+        </org.prauga.calculator.CalculatorScrollView>
 
-        <com.android.calculator2.CalculatorResult
+        <org.prauga.calculator.CalculatorResult
             android:id="@+id/result"
             style="@style/DisplayTextStyle.Result"
             android:layout_width="match_parent"
@@ -52,4 +52,4 @@
 
     <include layout="@layout/drag_handle" />
 
-</com.android.calculator2.CalculatorDisplay>
+</org.prauga.calculator.CalculatorDisplay>

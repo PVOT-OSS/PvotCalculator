@@ -12,7 +12,7 @@
     android:layout_height="match_parent"
     android:background="?colorSurface">
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/op_sqrt"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_op_sqrt"
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/op_sqr"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_op_sqr"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/const_pi"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_const_pi"
@@ -47,7 +47,7 @@
         app:layout_constraintStart_toEndOf="@id/columnGuide1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/op_pow"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_op_pow"
@@ -58,7 +58,7 @@
         app:layout_constraintStart_toEndOf="@id/columnGuide2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/op_fact"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_op_fact"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toEndOf="@id/columnGuide3"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/toggle_mode"
         style="@style/PadButtonStyle.SmallCaps"
         android:contentDescription="@string/desc_switch_deg"
@@ -80,7 +80,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_sin"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_sin"
@@ -91,7 +91,7 @@
         app:layout_constraintStart_toStartOf="@id/columnGuide1"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_arcsin"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_arcsin"
@@ -104,7 +104,7 @@
         app:layout_constraintStart_toStartOf="@id/columnGuide1"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_cos"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_cos"
@@ -115,7 +115,7 @@
         app:layout_constraintStart_toStartOf="@id/columnGuide2"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_arccos"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_arccos"
@@ -128,7 +128,7 @@
         app:layout_constraintStart_toStartOf="@id/columnGuide2"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_tan"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_tan"
@@ -139,7 +139,7 @@
         app:layout_constraintStart_toStartOf="@id/columnGuide3"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_arctan"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_arctan"
@@ -152,7 +152,7 @@
         app:layout_constraintStart_toStartOf="@id/columnGuide3"
         app:layout_constraintTop_toTopOf="@id/rowGuide1" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/toggle_inv"
         style="@style/PadButtonStyle.SmallCaps"
         android:contentDescription="@string/desc_inv_off"
@@ -163,7 +163,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/rowGuide2" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/const_e"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_const_e"
@@ -174,7 +174,7 @@
         app:layout_constraintStart_toEndOf="@id/columnGuide1"
         app:layout_constraintTop_toBottomOf="@id/rowGuide2" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_ln"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_ln"
@@ -186,7 +186,7 @@
         app:layout_constraintTop_toBottomOf="@id/rowGuide2" />
 
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_exp"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_exp"
@@ -199,7 +199,7 @@
         app:layout_constraintStart_toEndOf="@id/columnGuide2"
         app:layout_constraintTop_toBottomOf="@id/rowGuide2" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_log"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_log"
@@ -210,7 +210,7 @@
         app:layout_constraintStart_toEndOf="@id/columnGuide3"
         app:layout_constraintTop_toBottomOf="@id/rowGuide2" />
 
-    <com.android.calculator2.HapticButton
+    <org.prauga.calculator.HapticButton
         android:id="@+id/fun_10pow"
         style="@style/PadButtonStyle.SmallText"
         android:contentDescription="@string/desc_fun_10pow"

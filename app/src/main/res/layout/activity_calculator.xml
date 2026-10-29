@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: 2014 The Android Open Source Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<com.android.calculator2.DisplayMotionLayout
+<org.prauga.calculator.DisplayMotionLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_calculator"
@@ -62,4 +62,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent" />
 
-</com.android.calculator2.DisplayMotionLayout>
+</org.prauga.calculator.DisplayMotionLayout>

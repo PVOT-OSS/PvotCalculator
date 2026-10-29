@@ -56,6 +56,6 @@
 
 # Some small BoundedRational methods like equals() are not used by the
 # calculator, but crucial for testing.
--keepclassmembers class com.android.calculator2.BoundedRational { *; }
+-keepclassmembers class org.prauga.calculator.BoundedRational { *; }
 # Need CR comparison operators for testing.
 -keepclassmembers class com.hp.creals.CR { *; }

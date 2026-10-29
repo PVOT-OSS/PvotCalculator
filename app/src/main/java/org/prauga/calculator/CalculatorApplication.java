@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.android.calculator2;
+package org.prauga.calculator;
 
 import android.app.Application;
 

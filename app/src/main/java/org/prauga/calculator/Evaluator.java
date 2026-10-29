@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package com.android.calculator2;
+package org.prauga.calculator;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -1723,7 +1723,7 @@ public class Evaluator implements CalculatorExpr.ExprResolver {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         df.setTimeZone(tz);
         final String isoDate = df.format(new Date());
-        mSavedName = "calculator2.android.com," + isoDate + ":"
+        mSavedName = "calculator.prauga.org," + isoDate + ":"
                 + (new Random().nextInt() & 0x3fffffff);
         mSharedPrefs.edit()
                 .putString(KEY_PREF_SAVED_NAME, mSavedName)

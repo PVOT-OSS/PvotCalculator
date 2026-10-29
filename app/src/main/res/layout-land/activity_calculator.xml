@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<com.android.calculator2.DisplayMotionLayout
+<org.prauga.calculator.DisplayMotionLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_calculator"
@@ -69,4 +69,4 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="@dimen/layout_advanced_pad_ratio" />
 
-</com.android.calculator2.DisplayMotionLayout>
+</org.prauga.calculator.DisplayMotionLayout>

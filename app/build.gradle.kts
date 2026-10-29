@@ -10,10 +10,10 @@ plugins {
 
 android {
     compileSdk = 35
-    namespace = "com.android.calculator2"
+    namespace = "org.prauga.calculator"
 
     defaultConfig {
-        applicationId = "com.android.calculator2"
+        applicationId = "org.prauga.calculator"
         minSdk = 31
         targetSdk = 35
         versionCode = 1

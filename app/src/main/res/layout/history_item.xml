@@ -32,14 +32,14 @@
         android:text="@string/title_current_expression"
         android:textSize="14dp" />
 
-    <com.android.calculator2.CalculatorScrollView
+    <org.prauga.calculator.CalculatorScrollView
         android:id="@+id/history_formula_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:overScrollMode="never"
         android:scrollbars="none">
 
-        <com.android.calculator2.AlignedTextView
+        <org.prauga.calculator.AlignedTextView
             android:id="@+id/history_formula"
             style="@style/HistoryItemTextStyle"
             android:layout_width="wrap_content"
@@ -47,9 +47,9 @@
             android:ellipsize="none"
             android:textColor="@color/display_formula_text_color" />
 
-    </com.android.calculator2.CalculatorScrollView>
+    </org.prauga.calculator.CalculatorScrollView>
 
-    <com.android.calculator2.CalculatorResult
+    <org.prauga.calculator.CalculatorResult
         android:id="@+id/history_result"
         style="@style/HistoryItemTextStyle"
         android:layout_width="match_parent"

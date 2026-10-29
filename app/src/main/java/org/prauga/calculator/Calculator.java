@@ -12,9 +12,9 @@
 //       more useful text version in a separate window.  It's not clear
 //       this is worth the added (code and user) complexity.
 
-package com.android.calculator2;
+package org.prauga.calculator;
 
-import static com.android.calculator2.CalculatorFormula.OnFormulaContextMenuClickListener;
+import static org.prauga.calculator.CalculatorFormula.OnFormulaContextMenuClickListener;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -57,7 +57,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.android.calculator2.CalculatorFormula.OnTextSizeChangeListener;
+import org.prauga.calculator.CalculatorFormula.OnTextSizeChangeListener;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
