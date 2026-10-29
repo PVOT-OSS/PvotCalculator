@@ -1,0 +1,1 @@
+An exact calculator: scroll any answer for as many digits as you like.
